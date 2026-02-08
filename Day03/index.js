@@ -70,3 +70,5 @@
 
     //OTP Generate using Math.random
     console.log(Math.floor(Math.random()*(9999-1000+1))+1000);
+
+    console.log(Math.floor(Math.random()*(30-19+1))+19);

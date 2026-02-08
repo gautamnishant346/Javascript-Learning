@@ -82,11 +82,11 @@ let b = 0.2;
 console.log(c);*/
 
 //1: null is loosely equal to undefined only
-/*console.log(null==undefined);
-console.log(null===undefined);
-console.log(null==0);
-console.log(null=="");
-console.log(null==true);*/
+// console.log(null==undefined);
+// console.log(null===undefined);
+// console.log(null==0);
+// console.log(null=="");
+// console.log(null==true);
 
 //>,<,>=,<= (null --> number, undefined --> NaN)
 //agar ya sign use hue to null convert hojayga number ma undefined NaN ma
@@ -185,7 +185,7 @@ while(i<10){
 // if first value is true, it will return second value
 
 // || Logical or
-let e = 10;
+let e = 0;
 let f = 20;
 console.log(e||f);
 //agar pehli condition true ha to usi ko return kr dega

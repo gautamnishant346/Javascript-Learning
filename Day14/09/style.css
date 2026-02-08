@@ -1,0 +1,23 @@
+input{
+    height: 30px;
+    width: 300px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 8px;
+    border: none;
+}
+h1{
+    margin-left: 70px;
+}
+button{
+    padding: 5px;
+    height: 40px;
+    width: 140px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(17, 147, 198);
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    margin-left: 70px;
+}
