@@ -5,7 +5,7 @@ body.addEventListener('click',(e)=>{
 
     const circleElement = document.createElement('div');
     circleElement.classList.add('circle');
-    circleElement.textContent = "ghop";
+    circleElement.textContent = "Hi";
 
     const color = ['red','blue','green','yellow','pink','brown','aqua'];
     circleElement.style.backgroundColor = color[Math.floor(Math.random()*7)];
