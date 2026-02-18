@@ -130,19 +130,50 @@
 // meet(greet);
 // meet(dance);
 
-function blinkitOrderPlaced(){
-    console.log("We have started packing your order");
-}
+//function blinkitOrderPlaced(){
+//    console.log("We have started packing your order");
+//}
+//
+//function zomatoOrderPlaced(){
+//    console.log("We have started preparing your food");
+//}
+//
+//function payment(amount,callback){
+//    console.log(`${amount} payment has initialized`);
+//    console.log("Payment is received");
+//    callback();
+//}
 
-function zomatoOrderPlaced(){
-    console.log("We have started preparing your food");
-}
+//payment(500,zomatoOrderPlaced);
+//payment(399,blinkitOrderPlaced);
 
-function payment(amount,callback){
-    console.log(`${amount} payment has initialized`);
-    console.log("Payment is received");
+
+//function greet(name,callback){
+//    console.log("Hello "+ name);
+//    callback();
+//}
+//
+//function sayBye(){
+//    console.log("Bye Nishant");
+//}
+//
+//greet("Nishant",sayBye);
+
+
+
+//function greet(name,callback){
+//    console.log("Hello " + name);
+//    callback();
+//}
+//
+// greet("Riya", () => {
+//    console.log("Arrow function in callback"); 
+// });
+
+
+function one(name,callback){
+    console.log("Hello " + name);
     callback();
 }
 
-payment(500,zomatoOrderPlaced);
-//payment(300,blinkitOrderPlaced);
+one("Nishant", ()=>console.log("Bye Bhai"))
