@@ -130,9 +130,14 @@ function placedOrder(orderDetail){
 
     return new Promise((resolve,reject)=>{
        setTimeout(()=>{
+        if(Math.random()>0.1){
        console.log("Payment is received and order get placed");
        orderDetail.status = true;
        resolve(orderDetail);
+        }
+        else{
+            reject("Payment is failed");
+        }
     },3000)
     })
     
@@ -141,32 +146,67 @@ function placedOrder(orderDetail){
 function preparingOrder(orderDetail){
    console.log(`Your food preparation started of ${orderDetail.food}`);
 
-   setTimeout(()=>{
+   return new Promise((resolve,reject)=>{
+     setTimeout(()=>{
+        if(Math.random()>0.1){
       console.log("Your order is now prepared");
       orderDetail.token = 123;
+      resolve(orderDetail);
+        }
+        else{
+            reject("Failed to prepare order");
+        }
    },3000)
+   })
+   
 }
 
 function pickupOrder(orderDetail){
     console.log(`Delivery boy is on a way to pickup order from ${orderDetail.restaurant_location}`);
 
-    setTimeout(()=>{
+     return new Promise((resolve,reject)=>{
+       setTimeout(()=>{
+        if(Math.random()>0.2){
         console.log("I have picked up the order");
         orderDetail.received = true;
+        resolve(orderDetail);
+        }
+        else{
+            reject("Order pickup failed");
+        }
     },3000)
+     })
+    
 }
 
 function deliverOrder(orderDetail){
     console.log(`I am on my way to deliver order ${orderDetail.customer_location}`);
 
-    setTimeout(()=>{
+    return new Promise((resolve,reject)=>{
+       setTimeout(()=>{
+        if(Math.random()>0.1){
        console.log("Order delivered successfully");
        orderDetail.delivery = true;
+       resolve(orderDetail);
+        }
+        else{
+            reject("failed to deliver order");
+        }
     },3000);
+    })
+    
 }
 
 placedOrder(orderDetail)
 .then((orderDetail)=>preparingOrder(orderDetail))
 .then((orderDetail)=>pickupOrder(orderDetail))
 .then((orderDetail)=>deliverOrder(orderDetail))
-
+.then((orderDetail)=>{
+    console.log(orderDetail);
+})
+.catch((error)=>{
+    console.log("Error: ",error);
+})
+.finally(()=>{
+  console.log("I am doing cleanup");
+})

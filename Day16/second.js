@@ -1,30 +1,70 @@
 // Callback hell
 
-function order(callback){
+//function order(callback){
+//    console.log("Order received");
+//
+//    setTimeout(()=>{
+//      callback();
+//    },2000)
+//}
+//
+//function cook(callback){
+//  console.log("Burger bn rha ha");
+//
+//  setTimeout(()=>{
+//     callback();
+//  },2000)
+//}
+//
+//function deliver(){
+//    console.log("Burger deliver");
+//    setTimeout(()=>{
+//
+//    })
+//}
+//
+//order(()=>{
+//  cook(()=>{
+//    deliver(()=>{
+//      
+//    })
+//  });
+//})
+
+
+function order(){
+  return new Promise((resolve,reject)=>{
     console.log("Order received");
 
     setTimeout(()=>{
-      callback();
-    },2000)
+       resolve();
+    },2000);
+  });
 }
 
-function cook(callback){
-  console.log("Burger bn rha ha");
+function cook(){
+  return new Promise((resolve,reject)=>{
+    console.log("Pizza bn rha ha");
 
-  setTimeout(()=>{
-     callback();
-  },2000)
+    setTimeout(()=>{
+      resolve();
+    },2000);
+  });
 }
 
 function deliver(){
-    console.log("Burger deliver");
-    setTimeout(()=>{
+  return new Promise((resolve,reject)=>{
+    console.log("Order delivered successfull");
 
-    })
+    setTimeout(()=>{
+      resolve();
+    },2000);
+  });
 }
 
-order(()=>{
-  cook(()=>{
-     deliver();
-  });
-});
+order()
+.then(cook)
+.then(deliver)
+.finally(()=>{
+  console.log("Process finished");
+})
