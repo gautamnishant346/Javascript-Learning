@@ -24,6 +24,7 @@ yes.addEventListener('click',()=>{
     show.classList.add("one");
     const msg = document.createElement("h2");
     msg.textContent = "Yes I knew it...";
+    msg.style.color = "skyblue";
 
     show.append(msg);
     parent.append(show);
