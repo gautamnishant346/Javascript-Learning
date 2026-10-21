@@ -182,7 +182,7 @@ while(i<10){
 // console.log(e&&f);
 
 //&&: if first vaue is false, it will return the first value itself
-// if first value is true, it will return second value
+// if first value is true, it will return second value (agar second true ha)
 
 // || Logical or
 let e = 0;

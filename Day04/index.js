@@ -64,9 +64,7 @@
 
 
 // Date
-
 //const now = new Date();
-
 //console.log(now);     // utc ka according time dega
 //console.log(now.toString());
 //console.log(now.toISOString());

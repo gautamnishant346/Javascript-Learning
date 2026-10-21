@@ -3,7 +3,7 @@
 //let b = 345.6821;
 // let c = b.toFixed(1)
 // console.log(c);
-// toFixed function decimal ka bad sirf 2 digit hi lega
+// toFixed function btata ha ki decimal ka bad kitni digits leni hai.
 // toFixed string return krta ha
 
 //console.log(b.toPrecision(4));
