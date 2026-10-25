@@ -53,7 +53,6 @@
 
 //const arr = [1,2,3,4,5,6,7,8,9,10];
 //const newArr = arr.filter( (num) => num > 6);
-//console.log(newArr);
 
 
 //const squared = arr.map( (num) => num**2).map( (num) => num+1)
@@ -61,14 +60,12 @@
 //console.log(squared);
 //
 
-
-
 const books = [
     {title: 'Book One', genre: 'Fiction', publish: 1981, edition: 2004, price: 150},
+    {title: 'Book Five', genre: 'Non-Fiction', publish: 2011, edition: 2002, price: 199},
     {title: 'Book Two', genre: 'Non-Fiction', publish: 1992, edition: 2008, price: 200},
     {title: 'Book Three', genre: 'History', publish: 1999, edition: 2007, price: 480},
     {title: 'Book Four', genre: 'Science', publish: 2009, edition: 2011, price: 100},
-    {title: 'Book Five', genre: 'Non-Fiction', publish: 2011, edition: 2002, price: 199}
 ]
 
 const totalPrice = books.reduce( (acc,item) => acc+item.price,0)
